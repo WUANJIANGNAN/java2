@@ -19,7 +19,7 @@ module.exports = function main(num)
 		j = 0;
 		while(j != Number(i))
 			j++;
-		text += up[j];
+		text += mid[j];
 	}
 	text = text + "\n";
 	for(i = 0, i < num.length, i++)
@@ -27,7 +27,7 @@ module.exports = function main(num)
 		j = 0;
 		while(j != Number(i))
 			j++;
-		text += up[j];
+		text += down[j];
 	}
 	text = text + "\n";
 	console.log(text);
