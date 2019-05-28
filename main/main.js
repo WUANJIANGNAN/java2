@@ -1,8 +1,8 @@
 module.exports = function main(num)
 {
-var i;
+	var i;
 	var j;
-	var text = "\0";
+	var text = "1";
 	var a = ["._. ","... ","._. ","._. ","... ","._. ","._. ","._. ","._. ","._. "];
 	var b = ["|.| ","..| ","._| ","._| ","|_| ","|_. ","|_. ","..| ","|_| ","|_| "];
 	var c = ["|_| ","..| ","|_. ","._| ","..| ","._| ","|_| ","..| ","|_| ","..| "];
@@ -13,7 +13,7 @@ var i;
 			j++;
 		text += a[j];
 	}
-	text = text.substring(0, text.length - 1) + "\n";
+	text = text.substring(1, text.length - 1) + "\n";
 	for(i = 0; i < num.length; i++)
 	{
 		j = 0;
