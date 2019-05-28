@@ -3,15 +3,15 @@ module.exports = function main(num)
 	var i;
 	var j;
 	var text;
-	var up = [];
-	var mid = [];
-	var down = [];
+	var up = [“._.”,“...”,“._.”,“._.”,”...”,”._.”,”._.”,”._.”,”._.”,”._.”];
+	var mid = [“|.|”,”..|”,”._|”,”._|”,”|_|”,”|_.”,”|_.”,”..|”,”|_|”,”|_|”];
+	var down = [“|_|”,”..|”,”|_.”,”._|”,”..|”,”._|”,”|_|”,”..|”,”|_|”,”..|”];
 	for(i = 0, i < num.length, i++)
 	{
 		j = 0;
 		while(j != Number(i))
 			j++;
-		text += up[j - 1];
+		text += up[j];
 	}
 	text = text + "\n";
 	for(i = 0, i < num.length, i++)
@@ -19,7 +19,7 @@ module.exports = function main(num)
 		j = 0;
 		while(j != Number(i))
 			j++;
-		text += up[j - 1];
+		text += up[j];
 	}
 	text = text + "\n";
 	for(i = 0, i < num.length, i++)
@@ -27,7 +27,7 @@ module.exports = function main(num)
 		j = 0;
 		while(j != Number(i))
 			j++;
-		text += up[j - 1];
+		text += up[j];
 	}
 	text = text + "\n";
 	console.log(text);
