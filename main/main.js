@@ -1,35 +1,35 @@
 module.exports = function main(num)
 {
-	var i;
+var i;
 	var j;
-	var text;
-	var up = [“._.”,“...”,“._.”,“._.”,”...”,”._.”,”._.”,”._.”,”._.”,”._.”];
-	var mid = [“|.|”,”..|”,”._|”,”._|”,”|_|”,”|_.”,”|_.”,”..|”,”|_|”,”|_|”];
-	var down = [“|_|”,”..|”,”|_.”,”._|”,”..|”,”._|”,”|_|”,”..|”,”|_|”,”..|”];
-	for(i = 0, i < num.length, i++)
+	var text = "\0";
+	var a = ["._. ","... ","._. ","._. ","... ","._. ","._. ","._. ","._. ","._. "];
+	var b = ["|.| ","..| ","._| ","._| ","|_| ","|_. ","|_. ","..| ","|_| ","|_| "];
+	var c = ["|_| ","..| ","|_. ","._| ","..| ","._| ","|_| ","..| ","|_| ","..| "];
+	for(i = 0; i < num.length; i++)
 	{
 		j = 0;
-		while(j != Number(i))
+		while(j != Number(num[i]))
 			j++;
-		text += up[j];
+		text += a[j];
 	}
-	text = text + "\n";
-	for(i = 0, i < num.length, i++)
+	text = text.substring(0, text.length - 1) + "\n";
+	for(i = 0; i < num.length; i++)
 	{
 		j = 0;
-		while(j != Number(i))
+		while(j != Number(num[i]))
 			j++;
-		text += mid[j];
+		text += b[j];
 	}
-	text = text + "\n";
-	for(i = 0, i < num.length, i++)
+	text = text.substring(0, text.length - 1) + "\n";
+	for(i = 0; i < num.length; i++)
 	{
 		j = 0;
-		while(j != Number(i))
+		while(j != Number(num[i]))
 			j++;
-		text += down[j];
+		text += c[j];
 	}
-	text = text + "\n";
+	text = text.substring(0, text.length - 1) + "\n";
 	console.log(text);
 	return text;
 };
